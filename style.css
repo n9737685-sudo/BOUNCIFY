@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #111b43, #35205e);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    width: min(900px, 100%);
+    margin: auto;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    background: #202d60;
+    border-radius: 15px 15px 0 0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffe66d;
+}
+
+.stats {
+    display: flex;
+    gap: 18px;
+    font-size: 18px;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 4px solid #5269bd;
+    border-radius: 0 0 15px 15px;
+    background: #87ceeb;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 18px;
+    background: rgba(15, 25, 70, 0.82);
+    padding: 20px;
+}
+
+.screen h1 {
+    font-size: clamp(32px, 8vw, 65px);
+    color: #ffe66d;
+    text-shadow: 3px 3px #8b50c9;
+}
+
+.screen p {
+    font-size: 18px;
+}
+
+.screen button,
+.shop button {
+    background: #ffcf4a;
+    color: #33234d;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.screen button:hover,
+.shop button:hover {
+    transform: translateY(-3px);
+    background: #fff08a;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    text-align: center;
+    padding: 18px;
+    line-height: 1.8;
+    color: #dce6ff;
+}
+
+.shop {
+    background: #202d60;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.shop h2 {
+    margin-bottom: 15px;
+    color: #ffe66d;
+}
+
+.shop-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.shop button {
+    font-size: 13px;
+}
+
+#shopMessage {
+    margin-top: 15px;
+    color: #c9d8ff;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 8px;
+    }
+
+    .stats {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}

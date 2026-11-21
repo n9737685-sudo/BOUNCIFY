@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNCIFY - Bounce Back</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+        <header class="top-bar">
+            <div class="logo">☁ BOUNCIFY</div>
+            <div class="stats">
+                <span>🪙 <b id="coins">0</b></span>
+                <span>❤️ <b id="lives">3</b></span>
+                <span>🏆 <b id="score">0</b></span>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+            <div id="startScreen" class="screen">
+                <h1>BOUNCIFY</h1>
+                <p>BOUNCE BACK TO THE SKY!</p>
+                <button id="playButton">START GAME</button>
+            </div>
+
+            <div id="gameOverScreen" class="screen hidden">
+                <h1>GAME OVER</h1>
+                <p>Your adventure has ended!</p>
+                <button id="restartButton">TRY AGAIN</button>
+            </div>
+
+            <div id="winScreen" class="screen hidden">
+                <h1>LEVEL COMPLETE!</h1>
+                <p>You reached the clouds!</p>
+                <button id="nextButton">NEXT LEVEL</button>
+            </div>
+        </div>
+
+        <section class="controls">
+            <p>← → Move | SPACE / ↑ Jump</p>
+            <p>Collect coins and climb higher!</p>
+        </section>
+
+        <section class="shop">
+            <h2>✨ POWER-UP SHOP</h2>
+            <div class="shop-buttons">
+                <button id="doubleBtn">Double Jump — 20 🪙</button>
+                <button id="highBtn">High Bounce — 15 🪙</button>
+                <button id="magnetBtn">Coin Magnet — 25 🪙</button>
+            </div>
+            <p id="shopMessage">Collect coins to unlock abilities!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
